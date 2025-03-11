@@ -10,24 +10,26 @@ body, html {
     color: white;
     text-align: center;
     font-family: Arial, sans-serif;
-    flex-direction: column;
+    flex-direction: column; /* 縦方向に並べる */
 }
 
-/* メインのコンテンツ */
 .background {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
     padding: 20px;
     border-radius: 10px;
 }
 
-/* 画面下に配置するテキスト（3段に分ける） */
+/* 画面下のテキストを縦に並べる */
 .bottom-text {
     position: absolute;
     bottom: 20px;
     width: 100%;
     text-align: center;
     font-size: 18px;
-    display: flex;
-    flex-direction: column; /* 縦方向に並べる */
-    gap: 5px; /* 各行の間隔を調整 */
+    display: block; /* blockにして縦に並べる */
 }
+
+.bottom-text p {
+    margin: 5px 0; /* 行間を調整 */
+}
+
