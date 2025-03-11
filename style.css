@@ -6,14 +6,28 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    background: url('https://source.unsplash.com/1600x900/?shopping') no-repeat center center/cover;
     color: white;
     text-align: center;
     font-family: Arial, sans-serif;
+    flex-direction: column;
 }
 
+/* メインのコンテンツ */
 .background {
-    background: rgba(0, 0, 0, 0.5); /* 背景を半透明にする（読みやすくする） */
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
+}
+
+/* 画面下に配置するテキスト（3段に分ける） */
+.bottom-text {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column; /* 縦方向に並べる */
+    gap: 5px; /* 各行の間隔を調整 */
 }
