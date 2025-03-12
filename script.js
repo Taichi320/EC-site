@@ -1,5 +1,6 @@
-// 画面全体のクリックで next.html へ遷移（トップページで動作）
-document.body.addEventListener("click", function() {
+// トップページ（index.html）で画面タップ時に next.html へ遷移
+document.body.addEventListener("click", function(event) {
+    // メニューアイコンやメニューをクリックした場合は遷移しない
     if (!event.target.closest(".menu-icon") && !event.target.closest(".menu")) {
         window.location.href = "next.html";
     }
