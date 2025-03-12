@@ -2,15 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById("menuIcon");
     const menu = document.getElementById("menu");
 
-    // メニューボタンをクリックしたときの動作
     menuIcon.addEventListener("click", function () {
-        menu.classList.toggle("show"); // メニューを開閉
+        menu.classList.toggle("show");
     });
 
-    // メニューのリンクをクリックしたとき、メニューを閉じる
-    document.querySelectorAll(".menu a").forEach(link => {
-        link.addEventListener("click", function () {
+    document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && event.target !== menuIcon) {
             menu.classList.remove("show");
-        });
+        }
     });
 });
