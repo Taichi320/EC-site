@@ -4,28 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ECサイト</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #232f3e;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+    }
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 15px;
+      background: #f9f9f9;
+    }
+    .product img {
+      max-width: 100%;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px;
+      background: #ff9900;
+      color: white;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-
-<!-- ハンバーガーメニューのアイコン -->
-<div class="menu-icon" onclick="toggleMenu()">
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
-
-<!-- メニュー内容 -->
-<nav class="menu">
-  <ul>
-    <li><a href="index.html">ホーム</a></li>
-    <li><a href="#">商品一覧</a></li>
-    <li><a href="#">セール情報</a></li>
-    <li><a href="#">カートを見る</a></li>
-    <li><a href="#">お問い合わせ</a></li>
-    <li><a href="#">ログイン</a></li>
-  </ul>
-</nav>
 
 <header>
   <h1>ECサイト</h1>
@@ -47,7 +59,38 @@
   </div>
 </div>
 
-<script src="script.js"></script>
-
 </body>
-</html>
+</html>  でstyle.cssがbody, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    flex-direction: column; /* 縦方向に並べる */
+}
+
+.background {
+    background: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 画面下のテキストを縦に並べる */
+.bottom-text {
+    position: absolute;
+    bottom: 20px;
+    width: 100%
+    text-align: center;
+    font-size: 18px;
+    display: block; /* blockにして縦に並べる */
+}
+
+.bottom-text p {
+    margin: 5px 0; /* 行間を調整 */
+}   
