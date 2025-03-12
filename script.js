@@ -1,7 +1,15 @@
+// 画面全体のクリックで next.html へ遷移（トップページで動作）
 document.body.addEventListener("click", function() {
-  window.location.href = "next.html";
+    if (!event.target.closest(".menu-icon") && !event.target.closest(".menu")) {
+        window.location.href = "next.html";
+    }
 });
 
+// ハンバーガーメニューの開閉
 function toggleMenu() {
-    document.querySelector(".menu").classList.toggle("open");
+    let menu = document.querySelector(".menu");
+    let menuIcon = document.querySelector(".menu-icon");
+
+    menu.classList.toggle("open");
+    menuIcon.classList.toggle("open");
 }
